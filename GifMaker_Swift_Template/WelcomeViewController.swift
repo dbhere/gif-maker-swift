@@ -13,7 +13,7 @@ class WelcomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let exampleGif = UIImage.gif(name: "hotlineBling")
+        let exampleGif = UIImage.gif(name: "boy")
         gifImageView.image = exampleGif
     }
 }
