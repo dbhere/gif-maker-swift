@@ -471,6 +471,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="GOk-gI-dlu"/>
                     <connections>
+                        <outlet property="gifImageView" destination="Wun-5B-Ruk" id="TvP-0s-omr"/>
                         <segue destination="gN0-HT-VRx" kind="show" identifier="showGifEditor" id="wkV-9i-gKS"/>
                     </connections>
                 </viewController>
