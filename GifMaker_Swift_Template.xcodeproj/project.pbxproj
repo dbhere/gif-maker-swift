@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		35110CD1220FD13300B8E827 /* UIViewController+Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35110CD0220FD13300B8E827 /* UIViewController+Record.swift */; };
+		35110CD32210362900B8E827 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35110CD22210362900B8E827 /* UIImage+Gif.swift */; };
 		3595F0622206F4BE00A280B5 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3595F0612206F4BE00A280B5 /* WelcomeViewController.swift */; };
 		3595F0642206F4D200A280B5 /* GifEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3595F0632206F4D200A280B5 /* GifEditorViewController.swift */; };
 		3595F0662206F4E300A280B5 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3595F0652206F4E300A280B5 /* PreviewViewController.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		35110CD0220FD13300B8E827 /* UIViewController+Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Record.swift"; sourceTree = "<group>"; };
+		35110CD22210362900B8E827 /* UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		3595F0612206F4BE00A280B5 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		3595F0632206F4D200A280B5 /* GifEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifEditorViewController.swift; sourceTree = "<group>"; };
 		3595F0652206F4E300A280B5 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				35110CD0220FD13300B8E827 /* UIViewController+Record.swift */,
+				35110CD22210362900B8E827 /* UIImage+Gif.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				EDFAA9201CDA9C3100D2CB08 /* Regift.swift in Sources */,
 				3595F0622206F4BE00A280B5 /* WelcomeViewController.swift in Sources */,
 				3595F0662206F4E300A280B5 /* PreviewViewController.swift in Sources */,
+				35110CD32210362900B8E827 /* UIImage+Gif.swift in Sources */,
 				3595F0642206F4D200A280B5 /* GifEditorViewController.swift in Sources */,
 				EDFAA9211CDA9C3100D2CB08 /* RegiftCaption.swift in Sources */,
 				EDFAA8ED1CDA99A500D2CB08 /* AppDelegate.swift in Sources */,
