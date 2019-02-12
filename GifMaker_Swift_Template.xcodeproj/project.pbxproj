@@ -10,6 +10,7 @@
 		35110CD1220FD13300B8E827 /* UIViewController+Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35110CD0220FD13300B8E827 /* UIViewController+Record.swift */; };
 		35110CD32210362900B8E827 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35110CD22210362900B8E827 /* UIImage+Gif.swift */; };
 		35110CD722103A7C00B8E827 /* boy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 35110CD622103A7C00B8E827 /* boy.gif */; };
+		35110CDA22127C8100B8E827 /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35110CD922127C8100B8E827 /* Gif.swift */; };
 		3595F0622206F4BE00A280B5 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3595F0612206F4BE00A280B5 /* WelcomeViewController.swift */; };
 		3595F0642206F4D200A280B5 /* GifEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3595F0632206F4D200A280B5 /* GifEditorViewController.swift */; };
 		3595F0662206F4E300A280B5 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3595F0652206F4E300A280B5 /* PreviewViewController.swift */; };
@@ -28,6 +29,7 @@
 		35110CD0220FD13300B8E827 /* UIViewController+Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Record.swift"; sourceTree = "<group>"; };
 		35110CD22210362900B8E827 /* UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		35110CD622103A7C00B8E827 /* boy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = boy.gif; sourceTree = "<group>"; };
+		35110CD922127C8100B8E827 /* Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
 		3595F0612206F4BE00A280B5 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		3595F0632206F4D200A280B5 /* GifEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifEditorViewController.swift; sourceTree = "<group>"; };
 		3595F0652206F4E300A280B5 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,14 @@
 				35110CD22210362900B8E827 /* UIImage+Gif.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		35110CD822127C5D00B8E827 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				35110CD922127C8100B8E827 /* Gif.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		3595F0602206F49A00A280B5 /* View Controllers */ = {
@@ -117,6 +127,7 @@
 				EDFAA8EC1CDA99A500D2CB08 /* AppDelegate.swift */,
 				35110CCF220FD0AC00B8E827 /* Extensions */,
 				3595F0602206F49A00A280B5 /* View Controllers */,
+				35110CD822127C5D00B8E827 /* Model */,
 				A94CC3D71D21C85A00DC758E /* Assets */,
 				A94CC3D61D21C84C00DC758E /* Supporting Files */,
 				EDFAA9221CDA9C4700D2CB08 /* Regift Files */,
@@ -214,6 +225,7 @@
 				3595F0622206F4BE00A280B5 /* WelcomeViewController.swift in Sources */,
 				3595F0662206F4E300A280B5 /* PreviewViewController.swift in Sources */,
 				35110CD32210362900B8E827 /* UIImage+Gif.swift in Sources */,
+				35110CDA22127C8100B8E827 /* Gif.swift in Sources */,
 				3595F0642206F4D200A280B5 /* GifEditorViewController.swift in Sources */,
 				EDFAA9211CDA9C3100D2CB08 /* RegiftCaption.swift in Sources */,
 				EDFAA8ED1CDA99A500D2CB08 /* AppDelegate.swift in Sources */,
