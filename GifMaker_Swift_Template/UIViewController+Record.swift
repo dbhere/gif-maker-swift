@@ -31,12 +31,13 @@ extension UIViewController {
     func convertVideoToGif(videoURL: URL) {
         let regift = Regift(sourceFileURL: videoURL, frameCount: frameCount, delayTime: delayTime, loopCount: loopCount)
         let gifURL = regift.createGif()
-        displayGif(url: gifURL)
+        let gif = Gif(url: gifURL!, videoURL: videoURL, caption: nil)
+        displayGif(gif)
     }
     
-    func displayGif(url: URL?) {
+    func displayGif(_ gif: Gif) {
         let gifEditorVC = storyboard?.instantiateViewController(withIdentifier: "GifEditorViewController") as! GifEditorViewController
-        gifEditorVC.gifURL = url
+        gifEditorVC.gif = gif
         navigationController?.pushViewController(gifEditorVC, animated: true)
     }
 }
