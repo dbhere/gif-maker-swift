@@ -27,6 +27,36 @@ class GifEditorViewController: UIViewController {
         
         gifImageView.image = gif?.gifImage
     }
+    
+    // MARK: - Preview gif
+    @IBAction func presentPreview(_ sender: AnyObject) {
+        let previewVC = storyboard?.instantiateViewController(withIdentifier: "PreviewViewController") as! PreviewViewController
+        
+        guard let gif = gif else {
+            //没有gif
+            return
+        }
+        
+        let regift = Regift(sourceFileURL: gif.videoURL, destinationFileURL: nil, frameCount: RegiftConstants.FrameCount, delayTime: RegiftConstants.DelayTime, loopCount: RegiftConstants.LoopCount)
+        
+        guard let gifURL = regift.createGif(captionTextField.text, font: captionTextField.font) else {
+            return
+        }
+        
+        let newGif = Gif.init(url: gifURL, videoURL: gif.videoURL, caption: captionTextField.text)
+        previewVC.gif = newGif
+        
+        navigationController?.pushViewController(previewVC, animated: true)
+    }
+}
+
+// MARK: - Constants
+extension GifEditorViewController {
+    struct RegiftConstants {
+        static let FrameCount = 16
+        static let DelayTime: Float = 0.2
+        static let LoopCount = 0 // // 0 means loop forever
+    }
 }
 
 // MARK: - TextFieldDelegate methods

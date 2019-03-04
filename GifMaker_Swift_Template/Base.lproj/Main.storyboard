@@ -205,6 +205,9 @@
                     <navigationItem key="navigationItem" title="Title" id="98w-hN-q9u">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="kvy-5V-EgW">
                             <color key="tintColor" red="1" green="0.25490196079999999" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="presentPreview:" destination="gN0-HT-VRx" id="0xo-hP-aa0"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -228,7 +231,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HQu-c2-zTO">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HQu-c2-zTO">
                                 <rect key="frame" x="16" y="40" width="343" height="343"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="HQu-c2-zTO" secondAttribute="height" multiplier="1:1" id="K5r-87-DUU"/>
@@ -271,6 +274,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Preview" id="SWX-N6-oaS"/>
+                    <connections>
+                        <outlet property="gifImageView" destination="HQu-c2-zTO" id="fOZ-nl-6IJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCC-tI-bRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
