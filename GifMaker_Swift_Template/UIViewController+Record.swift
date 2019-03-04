@@ -56,15 +56,24 @@ extension UIViewController {
         //set sourceType, mediaTypes, allowsEditing, delegate
         recordVideoController.sourceType = sourceType
         recordVideoController.mediaTypes = [kUTTypeMovie as String]
-        recordVideoController.allowsEditing = false
+        recordVideoController.allowsEditing = true
         recordVideoController.delegate = self
         
         present(recordVideoController, animated: true, completion: nil)
     }
     
     // MARK: - gif conversion
-    func convertVideoToGif(videoURL: URL) {
-        let regift = Regift(sourceFileURL: videoURL, frameCount: frameCount, delayTime: delayTime, loopCount: loopCount)
+    func convertVideoToGif(videoURL: URL, start: NSNumber?, duration: NSNumber?) {
+        let regift: Regift
+        
+        if start == nil {
+            // untrimmed
+            regift = Regift(sourceFileURL: videoURL, frameCount: frameCount, delayTime: delayTime, loopCount: loopCount)
+        } else {
+            // trimmed
+            regift = Regift(sourceFileURL: videoURL, destinationFileURL: nil, startTime: start!.floatValue, duration: duration!.floatValue, frameRate: frameCount, loopCount: loopCount)
+        }
+        
         let gifURL = regift.createGif()
         let gif = Gif(url: gifURL!, videoURL: videoURL, caption: nil)
         displayGif(gif)
@@ -91,8 +100,18 @@ extension UIViewController: UIImagePickerControllerDelegate {
         
         if mediaType == kUTTypeMovie as String {
             let videoURL = info[UIImagePickerControllerMediaURL] as! URL
-            //UISaveVideoAtPathToSavedPhotosAlbum(videoURL.path, nil, nil, nil)
-            convertVideoToGif(videoURL: videoURL)
+            
+            let start = info["_UIImagePickerControllerVideoEditingStart"] as? NSNumber
+            let end = info["_UIImagePickerControllerVideoEditingEnd"] as? NSNumber
+            let duration: NSNumber?
+            if let start = start {
+                duration = NSNumber(floatLiteral: Double(end!.floatValue - start.floatValue))
+            } else {
+                duration = nil
+            }
+            
+            convertVideoToGif(videoURL: videoURL, start: start, duration: duration)
+            
             dismiss(animated: true, completion: nil)
         }
     }
