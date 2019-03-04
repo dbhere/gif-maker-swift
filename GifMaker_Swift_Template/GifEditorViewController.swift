@@ -49,17 +49,13 @@ extension GifEditorViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
-    //仅在相同的键盘下才不会出问题，如果切换键盘会有问题
     func keyboardWillShow(notification: Notification) {
-        if (self.view.frame.origin.y >= 0) {
-            self.view.frame.origin.y -= getKeyboardHeight(notification: notification)
-        }
+        self.view.frame.origin.y = 0 - getKeyboardHeight(notification: notification)
+        
     }
     
     func keyboardWillHide(notification: Notification) {
-        if (self.view.frame.origin.y < 0) {
-            self.view.frame.origin.y += getKeyboardHeight(notification: notification)
-        }
+        self.view.frame.origin.y = 0
     }
     
     func getKeyboardHeight(notification: Notification) -> CGFloat {
