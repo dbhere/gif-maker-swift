@@ -9,9 +9,9 @@
 import UIKit
 
 class Gif {
-    let url: URL?
-    let videoURL: URL?
-    let caption: String?
+    let url: URL
+    let videoURL: URL
+    var caption: String?
     let gifImage: UIImage?
     var gifData: Data?
     
@@ -23,11 +23,4 @@ class Gif {
         self.gifData = nil
     }
     
-    init(name: String) {
-        self.gifImage = UIImage.gif(name: name)
-        self.url = nil
-        self.videoURL = nil
-        self.caption = nil
-        self.gifData = nil
-    }
 }
