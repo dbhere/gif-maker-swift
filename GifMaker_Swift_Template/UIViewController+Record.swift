@@ -42,22 +42,19 @@ extension UIViewController {
     }
     
     func launchVideoCamera() {
-        let recordVideoController = UIImagePickerController()
-        
-        //set sourceType, mediaTypes, allowsEditing, delegate
-        recordVideoController.sourceType = .camera
-        recordVideoController.mediaTypes = [kUTTypeMovie as String]
-        recordVideoController.allowsEditing = false
-        recordVideoController.delegate = self
-        
-        present(recordVideoController, animated: true, completion: nil)
+        pickerControllerWithSource(sourceType: .camera)
     }
     
     func launchPhotoLibrary() {
+        pickerControllerWithSource(sourceType: .photoLibrary)
+    }
+    
+    // MARK: - Utilities
+    func pickerControllerWithSource(sourceType: UIImagePickerController.SourceType) {
         let recordVideoController = UIImagePickerController()
         
         //set sourceType, mediaTypes, allowsEditing, delegate
-        recordVideoController.sourceType = .photoLibrary
+        recordVideoController.sourceType = sourceType
         recordVideoController.mediaTypes = [kUTTypeMovie as String]
         recordVideoController.allowsEditing = false
         recordVideoController.delegate = self
