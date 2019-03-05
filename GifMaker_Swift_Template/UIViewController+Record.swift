@@ -10,9 +10,13 @@ import UIKit
 import MobileCoreServices
 
 // Regift constants
-let frameCount = 16
-let delayTime  = Float(0.2)
-let loopCount  = 0    // 0 means loop forever
+extension UIViewController {
+    struct RegiftConstants {
+        static let FrameCount = 15
+        static let DelayTime: Float = 0.2
+        static let LoopCount = 0 // 0 means loop forever
+    }
+}
 
 extension UIViewController {
     // MARK: - 录制按钮
@@ -68,10 +72,10 @@ extension UIViewController {
         
         if start == nil {
             // untrimmed
-            regift = Regift(sourceFileURL: videoURL, frameCount: frameCount, delayTime: delayTime, loopCount: loopCount)
+            regift = Regift(sourceFileURL: videoURL, frameCount: RegiftConstants.FrameCount, delayTime: RegiftConstants.DelayTime, loopCount: RegiftConstants.LoopCount)
         } else {
             // trimmed
-            regift = Regift(sourceFileURL: videoURL, destinationFileURL: nil, startTime: start!.floatValue, duration: duration!.floatValue, frameRate: frameCount, loopCount: loopCount)
+            regift = Regift(sourceFileURL: videoURL, destinationFileURL: nil, startTime: start!.floatValue, duration: duration!.floatValue, frameRate: RegiftConstants.FrameCount, loopCount: RegiftConstants.LoopCount)
         }
         
         let gifURL = regift.createGif()

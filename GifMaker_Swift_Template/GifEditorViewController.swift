@@ -50,14 +50,6 @@ class GifEditorViewController: UIViewController {
     }
 }
 
-// MARK: - Constants
-extension GifEditorViewController {
-    struct RegiftConstants {
-        static let FrameCount = 16
-        static let DelayTime: Float = 0.2
-        static let LoopCount = 0 // // 0 means loop forever
-    }
-}
 
 // MARK: - TextFieldDelegate methods
 extension GifEditorViewController: UITextFieldDelegate {
